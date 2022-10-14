@@ -42,32 +42,32 @@
 
     <!-- Navbar -->
     <nav>
-        <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
-        <label for="checkbox" class="menu">
-            <i class="fas fa-bars"></i>
-        </label>
         <h2 class="logo">
             <span class="logo1">A</span>
             <span class="logo2">l</span>
             <span class="logo3">e</span>
             <span class="logo4">x</span> 
         </h2>
-        <ul>
-            <li><a href="#home" class="home">Home</a></li>
-            <li><a href="#readme">Readme</a></li>
-            <li><a href="#tech">Tech</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#why">Why</a></li>
-            <li><a href="#footer">Contact</a></li>
-        </ul>
+        
+        <button id="menu-button" class="menu"><i class="fas fa-bars"></i></button>
+        <div class="menu">
+            <ul>
+                <li><a href="#home" class="home">Home</a></li>
+                <li><a href="#readme">Readme</a></li>
+                <li><a href="#tech">Tech</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#why">Why</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     
     <!-- Header -->
     <header id="home">
         <div class="social-media">
             <div>
-                <i class="fa fa-brands fa-github"></i>
-                <i class="fa fa-brands fa-linkedin-in"></i>
+                <a class="social-links" href="https://github.com/alexander0lsson"><i class="fa fa-brands fa-github"></i></a>
+                <a class="social-links" href="https://www.linkedin.com/in/alexander-olsson-20b18817/"><i class="fa fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
         <div class="job-title">
@@ -188,5 +188,12 @@
                 <span>alexander.olsson@medieinstitutet.se</span>
             </a>
     </footer>
+    <!-- Script Navbar -->
+    <script>
+        const menuBtn = document.querySelector('#menu-button');
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('menu-open');
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+This is my portofolio build on the little knowledge in html and css I have so far. Sass is helping me so I will and can not take full credibility over my nice css structure. Im learning a lot as I go and fingers crossed, some Lia will read this text one day :) 
+
+
+# TEAM
+
+    <Alex> - <Front End Developer> -
+
+# THANKS
+
+    <medieinstitutet malmoe>
+
+# TECHNOLOGY COLOPHON
+
+    CSS, HTML, SASS

@@ -103,7 +103,7 @@ body {
     background-color: #FBFAF5;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 80px 55vh 60vh 35vh 10vh 45vh 55vh 80vh 35vh;
+    grid-template-rows: 80px 55vh 60vh 35vh 15vh 45vh 55vh 80vh 35vh;
     grid-template-areas: 
     "nav"
     "header"
@@ -395,6 +395,11 @@ img {
   height: auto;
   }
 
+.card div img {
+    width: 100%;
+    height: auto;
+}  
+
 .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -415,8 +420,19 @@ img {
   justify-content: center;
 }
 
+/* Why */
+
 .why {
     background-color: white;
+}
+
+.why a {
+    color:#efb5b0
+}
+
+.why a:hover {
+    color:white;
+    background-color: #efb5b0;
 }
 
 /* Footer */
@@ -448,10 +464,6 @@ img {
 .footer h2 {
     margin-bottom: 25px;
 }
-
-
-
-
 
 /* ==========================================================================
    Helper classes
@@ -569,34 +581,6 @@ img {
     .project2{
         margin-right: 20%;
     } 
-    
-    .menu {
-        display: none;
-    }
-    
-    nav ul {
-    /* position: inherit; */
-    max-width: 70%;
-    height: 100%;
-    background-color: transparent;
-    top: 0;
-    left: 150px;
-    text-align: center;
-    }
-
-    nav ul li {
-        display: inline-block;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    nav li a:hover {
-        transition: 0.4s;
-        background-color: #879818;
-        color: #FBFAF5;
-}
 
     h1 {
         font-size: 1.2em; 
@@ -635,6 +619,37 @@ img {
         margin-top: 0;
     }
     }
+
+@media only screen and (min-width: 829px) {
+    
+    .menu {
+        display: none;
+    }
+    
+    nav ul {
+    /* position: inherit; */
+    max-width: 70%;
+    height: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 150px;
+    text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    nav li a:hover {
+        transition: 0.4s;
+        background-color: #879818;
+        color: #FBFAF5;
+}
+}    
     
 @media only screen and (min-width: 952px) {
     

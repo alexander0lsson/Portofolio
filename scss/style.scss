@@ -439,6 +439,7 @@ img {
         justify-content: right;
         bottom: 30%;
         right: 8%;
+        border: 1px solid black;
     }
 
     .img-div {
@@ -517,8 +518,8 @@ img {
     .img-container {
         justify-content: center;
         right: 0;
-        left: 15%;
-        bottom: 20%;    
+        margin-left: 10%;
+        bottom: 20%; 
     }
 
     .img-div {

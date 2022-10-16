@@ -1,0 +1,532 @@
+$primary-color: #efb5b0;
+$cream-color: #f4ead6;
+$green-color: #879818;
+$darkgreen-color: #384b03;
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+  
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+  /* --- GRID --- */
+  
+body {
+    background-color: #FBFAF5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 55vh 60vh 35vh 15vh 45vh 55vh 80vh 35vh;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "readme"
+    "tech"
+    "project"
+    "project1"
+    "project2"
+    "why"
+    "footer"
+    ;
+
+    .nav {
+        grid-area: nav;
+    }
+
+    header {
+        grid-area: header;
+    }
+    
+    .readme {
+        grid-area: readme;
+    }
+    
+    .tech {
+        grid-area: tech;
+    }
+    
+    .project {
+        grid-area: project;
+    }
+    
+    .project1 {
+        grid-area: project1;
+    }
+    
+    .project2 {
+        grid-area: project2;
+    }
+      
+    .why {
+        grid-area: why;
+    }
+    
+    .footer {
+        grid-area: footer;
+    }
+}
+
+// Nav 
+
+nav {
+    background-color: #FBFAF5;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+
+    .logo {
+        line-height: 74px;
+        padding: 0 30px;
+        font-family: 'Orbitron', sans-serif;
+        text-transform: lowercase;
+        display: inline-block;
+
+        span {
+            font-size: 1.8em;
+            padding: 0;
+        }
+
+        .logo1 {
+            color:$primary-color;
+        }
+        
+        .logo2 {
+            color: $cream-color;
+        }
+        
+        .logo3 {
+            color:$green-color;
+        }
+        
+        .logo4 {
+            color: $darkgreen-color;
+        }
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: $cream-color;
+        top: 80px;
+        text-align: center;
+        float: right;
+        margin-right: 20px;
+
+        li {
+            line-height: 80px;
+            margin: 0 5px;
+
+            a {
+                color: $green-color;
+                font-size: 20px;
+                padding: 7px 13px;
+                border-radius: 5%;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color:$darkgreen-color;
+            }
+        }
+    }
+}
+
+  
+.menu {
+    font-size: 30px;
+    color: $darkgreen-color;
+    float: right;
+    margin-right: 40px;
+    margin-top: 25px;
+    cursor: pointer;
+    display: block;
+}
+  
+button {
+    border: none;
+    background-color: transparent;
+
+    .fas {
+        font-size: 30px;
+        float: right;
+    }
+}
+
+
+
+button + .menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+button.menu-open + .menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+}
+ 
+button.menu-open + .menu ul {
+    left: -2px;
+}
+
+/* HEADER */
+
+header {
+    background-image: url('/img/alessio-soggetti-sky.jpeg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    
+    .social-media {
+        display: flex;
+        justify-content: end;
+        margin-top: 20px;
+        margin-right: 50px;
+
+        .social-links {
+            color: #000
+        }
+
+        .fa-github, .fa-linkedin-in {
+            font-size: 50px;
+            padding: 0 5px;
+        }
+    }
+
+    .job-title {
+        position: absolute;
+        left: 5%;
+        top: 25%;
+
+        h1 {
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.8em;
+            line-height: 1;
+            margin: .2em 0;
+        }
+    }
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: -15%;
+}
+
+.img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: 130px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    border: 3px solid $cream-color;
+}
+
+img {
+    height: 118px;
+    width: 118px;
+}
+
+/* SECTIONS */
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .section-div {
+        max-width: 80%;
+
+        p {
+            padding-top: 20px;
+
+            .line {
+                display: inline-block;
+                height: 6px;
+                width: 50px;
+                border-top: 3px dotted $primary-color;
+            }
+
+            a {
+                color: $primary-color;
+            }
+            
+            a:hover {
+                color:#fff;
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+.section-h2 {
+    max-width: fit-content;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 5%;
+    background-color: $primary-color;
+    text-transform: lowercase;
+    font-family: 'Orbitron', sans-serif;
+}
+
+// Tech
+
+.tech {
+    background-color: #fff;
+}
+
+// Projects
+
+.card {
+  margin: 20%;
+  box-shadow: 0 4px 8px 0 $primary-color;
+
+  .text-btns {
+    padding: 5px;
+    line-height: 1.5;
+
+    h3 {
+        color: $primary-color;
+    }
+  }
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px 0 $primary-color;
+}
+
+.card a img {
+  width: 100%;
+  height: auto;
+  }
+
+.card div img {
+    width: 100%;
+    height: auto;
+}  
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  .btn {
+    height: 18px;
+    width: 50px;
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 5%;
+    padding: 6px;
+    color: white;
+    background-color: #879818;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Why */
+
+.why {
+    background-color: white;
+}
+
+/* Footer */
+
+.footer {
+    background-image: url("/img/alessio-soggetti-sky-footer.jpeg");
+    background-color: #FBFAF5;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    .fa-brands {
+        font-size: 20px;
+    }
+
+    a {
+        color: #000;
+        padding: 10px
+    }
+}
+  
+@media only screen and (min-width: 678px) {
+    
+    body {
+        grid-auto-columns: 1fr 1fr;
+        grid-template-rows: 80px 65vh 35vh 25vh 15vh 55vh 50vh 45vh;
+        Grid-column-gap: 20px;
+        grid-template-areas: 
+        "nav nav"
+        "header header"
+        "readme readme"
+        "tech tech"
+        "project project"
+        "project1 project2"
+        "why why"
+        "footer footer"
+    }
+  
+    .card {
+        margin: 0%
+    }
+
+    .project1 {
+        margin-left: 20%;
+    }
+
+    .project2{
+        margin-right: 20%;
+    } 
+
+    h1 {
+        font-size: 1.2em; 
+    }
+
+    .job-title h2 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 4.5em;
+        line-height: 1;
+        margin: .2em 0;
+    }
+
+
+    .job-title p {
+        font-size: 1.3em;
+        margin-top: 4em;
+    }
+
+    .img-container {
+        justify-content: right;
+        bottom: 30%;
+        right: 8%;
+    }
+
+    .img-div {
+        height: 163px;
+        width: 163px;
+    }
+
+    img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .readme {
+        margin-top: 0;
+    }
+}
+  
+@media only screen and (min-width: 829px) {
+      
+    nav ul {
+    width: 700px;
+    height: 100%;
+    background-color: transparent;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    nav li a:hover {
+         color: #FBFAF5;  
+          transition: 0.4s;
+          background-color: #879818;
+   }
+
+   nav li a:active {
+    transition: 0.4s;
+    background-color: #879818;
+    color: #FBFAF5;
+   }
+}    
+      
+@media only screen and (min-width: 952px) {
+    
+    .body {
+        grid-template-rows: 80px 55vh 35vh 25vh 15vh 65vh 55vh 25vh;
+        grid-template-areas: 
+        "nav nav"
+        "header header"
+        "readme readme"
+        "tech tech"
+        "project project"
+        "project1 project2"
+        "why why"
+        "footer footer"
+    }
+   
+    .logo {
+        font-size: 1.7em;
+    }
+
+    nav ul li a {
+        font-size: 17px;
+    }
+
+    .img-container {
+        justify-content: center;
+        right: 0;
+        left: 15%;
+        bottom: 20%;    
+    }
+
+    .img-div {
+        height: 250px;
+        width: 250px;
+    }
+
+    img {
+        height: 230px;
+        width: 230px;
+    }
+}
